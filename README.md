@@ -32,7 +32,7 @@ mini-proje/
 ├── src/
 │   ├── index.js
 │   ├── package.json
-│   ├── package.json
+│   ├── package-lock.json
 │   └── db/
 │       └── init.sql
 ```
