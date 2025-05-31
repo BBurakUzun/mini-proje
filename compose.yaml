@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASS=123
+      - DB_NAME=miniproje
+      - PORT=3000
+    depends_on:
+      - db
+    volumes:
+      - ./src:/app
+    networks:
+      - mynet
+
+  db:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./src/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - mynet
+
+volumes:
+  db_data:
+
+networks:
+  mynet:
