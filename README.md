@@ -22,6 +22,7 @@ docker compose up --build
 http://localhost:3000
 
 ## Proje Yapısı
+```bash
 mini-proje/
 ├── Dockerfile
 ├── .env
@@ -34,6 +35,7 @@ mini-proje/
 │   ├── package.json
 │   └── db/
 │       └── init.sql
+```
 
 ## API Kullanımı
 
