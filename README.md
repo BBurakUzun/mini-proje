@@ -1,4 +1,4 @@
-# Mini Proje: Docker Multi-Service Uygulaması
+# Mini Proje: Docker Service Uygulaması
 
 Bu proje, Node.js ile yazılmış basit bir web app ile MySQL veritabanını birlikte çalıştıran çoklu servisli bir Docker uygulamasıdır.
 
